@@ -1,0 +1,25 @@
+﻿@page
+@model MyCrudAppRazor.Pages.Produtos.ExcluirModel
+@{
+}
+
+<h1>Excluir Produto</h1>
+
+<div>
+    <h4>Nome:</h4>
+    <p>@Model.Produto.NomeProduto</p>
+</div>
+<div>
+    <h4>Descrição:</h4>
+    <p>@Model.Produto.Descricao</p>
+</div>
+<div>
+    <h4>Preço:</h4>
+    <p>@Model.Produto.Preco</p>
+</div>
+
+<form method="post">
+    <input type="hidden" name="id" value="@Model.Produto.Id" />
+    <button type="submit">Confirmar Exclusão</button>
+    <a asp-page="Produtos">Cancelar</a>
+</form>
